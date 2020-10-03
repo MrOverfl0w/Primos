@@ -19,13 +19,12 @@ public class NumeroPrimo {
         j=2; 
         Sw_p=true;
         divisor=0;
-        while((Sw_p==true) && (j<=k-1)){
+        for (j=2; j<=Math.sqrt(k);j++){
             if(k%j ==  0 ){
                 Sw_p=false;
-                divisor=j;
-                
+                divisor=j; 
+                break;
             }
-            j=j+1;
         }
         if (Sw_p == true ){
             System.out.println("El número "+k+" es primo");
